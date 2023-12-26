@@ -64,7 +64,7 @@ func handleProcess(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		req, err := http.NewRequest(http.MethodPut, updateURL, bytes.NewBuffer(jsonValue))
+		req, err := http.NewRequest(http.MethodPost, updateURL, bytes.NewBuffer(jsonValue))
 		if err != nil {
 			fmt.Println("Ошибка при создании запроса на обновление:", err)
 			return
