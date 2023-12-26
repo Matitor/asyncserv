@@ -11,7 +11,7 @@ import (
 
 const (
 	expectedToken = "4321"
-	updateURL     = "http://localhost:8000/answ/update_async/"
+	updateURL     = "http://localhost:8000/answer/update_async/"
 )
 
 type HRResult struct {
