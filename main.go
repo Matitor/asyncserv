@@ -11,7 +11,8 @@ import (
 
 const (
 	expectedToken = "4321"
-	updateURL     = "http://localhost:8000/answer/update_async/"
+	//updateURL     = "http://192.168.18.40:8000/answer/update_async/"
+	updateURL = "http://0.0.0.0:8000/answer/update_async/"
 )
 
 type HRResult struct {
@@ -55,7 +56,7 @@ func handleProcess(w http.ResponseWriter, r *http.Request) {
 		expResult := HRResult{
 			AnswID: answid,
 			Suite:  result,
-			// Token:  token,
+			Token:  token,
 		}
 		fmt.Println("json", expResult)
 		jsonValue, err := json.Marshal(expResult)
